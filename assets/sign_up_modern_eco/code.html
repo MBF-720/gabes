@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gabès Sentinel - Sign Up</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1d",
+                        "outline": "#727785",
+                        "on-tertiary-container": "#f7fff1",
+                        "secondary-container": "#b7ccfd",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "primary": "#0058bd",
+                        "secondary-fixed-dim": "#b1c6f7",
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#c2c6d5",
+                        "on-surface-variant": "#424753",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed": "#002105",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9fa",
+                        "tertiary": "#0d6b24",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container": "#edeeef",
+                        "on-secondary-container": "#415680",
+                        "primary-container": "#2771df",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-secondary-fixed-variant": "#31466f",
+                        "on-tertiary-fixed-variant": "#005318",
+                        "inverse-primary": "#adc6ff",
+                        "on-primary-fixed-variant": "#004494",
+                        "secondary": "#495e89",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed": "#001a41",
+                        "tertiary-container": "#30853b",
+                        "tertiary-fixed": "#9ff79f",
+                        "secondary-fixed": "#d8e2ff",
+                        "tertiary-fixed-dim": "#83da85",
+                        "on-primary-container": "#fefcff",
+                        "on-surface": "#191c1d",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-tint": "#005ac1",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#001a41",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-on-surface": "#f0f1f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen flex items-center justify-center p-4 antialiased overflow-x-hidden">
+<!-- Decorative Ambient Background Elements -->
+<div class="fixed top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-secondary-fixed-dim/20 blur-[100px] -z-10 pointer-events-none"></div>
+<div class="fixed bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-tertiary-fixed-dim/10 blur-[120px] -z-10 pointer-events-none"></div>
+<!-- Main Content Canvas -->
+<main class="w-full max-w-md relative z-10">
+<!-- Sign Up Card Container -->
+<div class="bg-surface-container-lowest rounded-xl p-8 sm:p-10 shadow-[0_40px_60px_-15px_rgba(25,28,29,0.05)] relative overflow-hidden">
+<!-- Header Section -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-surface-container-low text-primary mb-6 shadow-[0_10px_30px_-5px_rgba(0,88,189,0.1)]">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<h1 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight mb-2">Join the Sentinel</h1>
+<p class="font-body text-secondary text-sm">Become part of the environmental monitoring network.</p>
+</div>
+<!-- Sign Up Form -->
+<form action="#" class="space-y-6" method="POST">
+<!-- Full Name Input -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant ml-1" for="fullName">Full Name</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary group-focus-within:text-primary transition-colors text-xl">person</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-highest border-0 rounded-lg text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all shadow-sm" id="fullName" name="fullName" placeholder="Jane Doe" required="" type="text"/>
+</div>
+</div>
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant ml-1" for="email">Email Address</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary group-focus-within:text-primary transition-colors text-xl">mail</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-highest border-0 rounded-lg text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all shadow-sm" id="email" name="email" placeholder="jane@example.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant ml-1" for="password">Password</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary group-focus-within:text-primary transition-colors text-xl">lock</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-highest border-0 rounded-lg text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all shadow-sm" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Confirm Password Input -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant ml-1" for="confirmPassword">Confirm Password</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary group-focus-within:text-primary transition-colors text-xl">shield_lock</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-4 bg-surface-container-highest border-0 rounded-lg text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/40 focus:bg-surface-container-lowest transition-all shadow-sm" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required="" type="password"/>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="w-full flex items-center justify-center py-4 px-6 rounded-full bg-gradient-to-b from-primary to-primary-container text-white font-label font-bold text-base shadow-[0_15px_30px_-5px_rgba(0,88,189,0.3)] hover:shadow-[0_20px_40px_-5px_rgba(0,88,189,0.4)] hover:-translate-y-0.5 transition-all duration-300" type="submit">
+                        Create Account
+                    </button>
+</div>
+</form>
+<!-- Footer Link -->
+<div class="mt-8 text-center">
+<p class="font-body text-sm text-secondary">
+                    Already have an account? 
+                    <a class="font-semibold text-primary hover:text-primary-container transition-colors ml-1" href="#">Login</a>
+</p>
+</div>
+</div>
+</main>
+</body></html>

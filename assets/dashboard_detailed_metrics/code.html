@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gabès Sentinel - Environmental Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#d8e2ff",
+                      "primary": "#0058bd",
+                      "on-tertiary-container": "#f7fff1",
+                      "inverse-surface": "#2e3132",
+                      "inverse-on-surface": "#f0f1f2",
+                      "on-tertiary-fixed": "#002105",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#b7ccfd",
+                      "outline": "#727785",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed-dim": "#adc6ff",
+                      "surface-container-highest": "#e1e3e4",
+                      "background": "#f8f9fa",
+                      "surface-tint": "#005ac1",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed": "#001a41",
+                      "on-background": "#191c1d",
+                      "secondary": "#495e89",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#c2c6d5",
+                      "tertiary-container": "#30853b",
+                      "on-secondary-fixed": "#001a41",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#83da85",
+                      "on-tertiary-fixed-variant": "#005318",
+                      "on-surface-variant": "#424753",
+                      "surface-bright": "#f8f9fa",
+                      "surface": "#f8f9fa",
+                      "on-surface": "#191c1d",
+                      "on-primary-container": "#fefcff",
+                      "surface-dim": "#d9dadb",
+                      "secondary-fixed-dim": "#b1c6f7",
+                      "error": "#ba1a1a",
+                      "inverse-primary": "#adc6ff",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-container": "#edeeef",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#d8e2ff",
+                      "on-secondary-container": "#415680",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#0d6b24",
+                      "tertiary-fixed": "#9ff79f",
+                      "primary-container": "#2771df",
+                      "on-primary-fixed-variant": "#004494",
+                      "surface-variant": "#e1e3e4",
+                      "surface-container-low": "#f3f4f5",
+                      "on-secondary-fixed-variant": "#31466f"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Manrope"
+                      ],
+                      "label": [
+                              "Manrope"
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f8f9fa; }
+        h1, h2, h3, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Ambient shadow utility */
+        .shadow-ambient {
+            box-shadow: 0 20px 40px -10px rgba(25, 28, 29, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface antialiased bg-surface selection:bg-primary/20 selection:text-primary">
+<!-- TopAppBar -->
+<header class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-3xl text-blue-600 dark:text-blue-400 font-['Plus_Jakarta_Sans'] text-lg font-bold tracking-tight docked w-full top-0 z-50 border-none bg-slate-50 dark:bg-slate-950 shadow-sm shadow-blue-500/5 hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform flex justify-between items-center px-6 py-4 fixed">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-700 dark:text-blue-300 font-black" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="text-xl font-black text-blue-700 dark:text-blue-300 tracking-tight">Gabès Sentinel</span>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden bg-surface-container-highest flex-shrink-0">
+<img alt="User profile photo" class="h-full w-full object-cover" data-alt="professional portrait of a woman with warm lighting and soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD47ys5OhjIfiRWkG-QMFgD1qm2M10wpyQ490ceBWNYbQ3g8eMkthGRN5DhTtd5sO976rjQ8PmhCN9GtnlKByiSncl3PI_sqMhXkVBLTY267dlo6y3EHvaY_qm2vyogjhlf-bI67GUtYzTq-2q7SrE8nYnX7nAOzYStnGeAPGwmpPedN1HOOpwXacFrSGAzgEkNb6n6AkEu1dde2VGCYQjbFSGRSl-W3fICzHkM-hQ9PSyPohcbWJZsErJQ72qT7nvk9OLZhQuw3Gvx"/>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-28 pb-36 px-4 md:px-8 max-w-5xl mx-auto flex flex-col gap-8">
+<!-- Header & Tabs -->
+<section class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight">Air Quality Forecast</h1>
+<p class="font-body text-on-surface-variant">Live updates and predictive trends for Gabès.</p>
+</div>
+<div class="flex gap-2 bg-surface-container-low p-1.5 rounded-full w-max shadow-sm border border-surface-container-highest/50">
+<button class="bg-surface-container-lowest text-on-surface px-6 py-2.5 rounded-full font-label font-bold text-sm shadow-sm transition-all">Today</button>
+<button class="text-on-surface-variant px-6 py-2.5 rounded-full font-label font-semibold text-sm hover:bg-surface-container-lowest/50 transition-all">Next 7 Days</button>
+</div>
+</section>
+<!-- Key Metrics Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Best Time Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-ambient flex flex-col justify-between min-h-[200px] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-fixed/30 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+<div class="flex justify-between items-start mb-6 relative z-10">
+<span class="font-label font-bold text-on-surface-variant text-xs uppercase tracking-widest">Best Time</span>
+<span class="material-symbols-outlined text-tertiary text-3xl">wb_sunny</span>
+</div>
+<div class="relative z-10">
+<div class="font-headline text-[4rem] leading-none text-on-surface font-extrabold mb-3 tracking-tighter">42</div>
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-fixed text-tertiary px-3.5 py-1.5 rounded-full text-xs font-bold font-label flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary block"></span> Good
+                        </span>
+<span class="text-sm font-label font-medium text-on-surface-variant">08:00 - 11:00</span>
+</div>
+</div>
+</div>
+<!-- Peak Level Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-ambient flex flex-col justify-between min-h-[200px] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-fixed/50 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
+<div class="flex justify-between items-start mb-6 relative z-10">
+<span class="font-label font-bold text-on-surface-variant text-xs uppercase tracking-widest">Peak Level</span>
+<span class="material-symbols-outlined text-secondary text-3xl">warning</span>
+</div>
+<div class="relative z-10">
+<div class="font-headline text-[4rem] leading-none text-on-surface font-extrabold mb-3 tracking-tighter">85</div>
+<div class="flex items-center gap-3">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3.5 py-1.5 rounded-full text-xs font-bold font-label flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary block"></span> Moderate (GPM)
+                        </span>
+<span class="text-sm font-label font-medium text-on-surface-variant">14:00 - 17:00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Hourly Forecast Chart -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-ambient">
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Hourly Forecast</h2>
+<span class="text-xs font-label font-bold text-on-surface-variant uppercase tracking-widest bg-surface-container-low px-3 py-1 rounded-full">AQI Level</span>
+</div>
+<div class="flex items-end justify-between h-48 gap-2 md:gap-4 mt-4 relative">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20 z-0">
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+</div>
+<!-- Bars -->
+<div class="flex flex-col items-center gap-3 w-full z-10">
+<div class="w-full md:w-10 bg-tertiary-fixed rounded-t-xl relative group transition-all duration-300 hover:brightness-95 cursor-pointer" style="height: 40%;">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-lg">42 AQI</div>
+</div>
+<span class="text-xs font-label font-medium text-on-surface-variant">8am</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full z-10">
+<div class="w-full md:w-10 bg-tertiary-fixed rounded-t-xl relative group transition-all duration-300 hover:brightness-95 cursor-pointer" style="height: 45%;">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-lg">48 AQI</div>
+</div>
+<span class="text-xs font-label font-medium text-on-surface-variant">10am</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full z-10">
+<div class="w-full md:w-10 bg-secondary-fixed rounded-t-xl relative group transition-all duration-300 hover:brightness-95 cursor-pointer" style="height: 60%;">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-lg">65 AQI</div>
+</div>
+<span class="text-xs font-label font-medium text-on-surface-variant">12pm</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full z-10">
+<div class="w-full md:w-10 bg-primary/80 rounded-t-xl relative group transition-all duration-300 hover:brightness-110 cursor-pointer" style="height: 85%;">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-lg">85 AQI</div>
+</div>
+<span class="text-xs font-label font-bold text-primary">2pm</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full z-10">
+<div class="w-full md:w-10 bg-secondary-fixed rounded-t-xl relative group transition-all duration-300 hover:brightness-95 cursor-pointer" style="height: 70%;">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-lg">72 AQI</div>
+</div>
+<span class="text-xs font-label font-medium text-on-surface-variant">4pm</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full z-10 hidden sm:flex">
+<div class="w-full md:w-10 bg-tertiary-fixed rounded-t-xl relative group transition-all duration-300 hover:brightness-95 cursor-pointer" style="height: 50%;">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-lg">52 AQI</div>
+</div>
+<span class="text-xs font-label font-medium text-on-surface-variant">6pm</span>
+</div>
+<div class="flex flex-col items-center gap-3 w-full z-10 hidden md:flex">
+<div class="w-full md:w-10 bg-tertiary-fixed rounded-t-xl relative group transition-all duration-300 hover:brightness-95 cursor-pointer" style="height: 42%;">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface text-xs font-bold px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-20 shadow-lg">44 AQI</div>
+</div>
+<span class="text-xs font-label font-medium text-on-surface-variant">8pm</span>
+</div>
+</div>
+</section>
+<!-- Pollutant Breakdown -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-ambient">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-secondary text-2xl">science</span>
+<h2 class="font-headline text-2xl font-bold text-on-surface tracking-tight">Pollutant Breakdown</h2>
+</div>
+<div class="flex flex-col gap-8">
+<!-- PM2.5 -->
+<div>
+<div class="flex justify-between items-end mb-3">
+<div class="flex flex-col">
+<span class="font-headline font-bold text-on-surface text-lg">PM2.5</span>
+<span class="font-body text-xs text-on-surface-variant">Fine Particulate Matter</span>
+</div>
+<span class="font-headline font-bold text-lg text-on-surface">28 <span class="font-body text-sm font-normal text-on-surface-variant">µg/m³</span></span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[60%] rounded-full relative">
+<div class="absolute inset-0 bg-white/20 w-1/2 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- NO2 -->
+<div>
+<div class="flex justify-between items-end mb-3">
+<div class="flex flex-col">
+<span class="font-headline font-bold text-on-surface text-lg">NO2</span>
+<span class="font-body text-xs text-on-surface-variant">Nitrogen Dioxide</span>
+</div>
+<span class="font-headline font-bold text-lg text-on-surface">15 <span class="font-body text-sm font-normal text-on-surface-variant">µg/m³</span></span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[30%] rounded-full relative">
+<div class="absolute inset-0 bg-white/20 w-1/2 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- SO2 -->
+<div>
+<div class="flex justify-between items-end mb-3">
+<div class="flex flex-col">
+<span class="font-headline font-bold text-on-surface text-lg">SO2</span>
+<span class="font-body text-xs text-on-surface-variant">Sulfur Dioxide</span>
+</div>
+<span class="font-headline font-bold text-lg text-on-surface">8 <span class="font-body text-sm font-normal text-on-surface-variant">µg/m³</span></span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[15%] rounded-full relative">
+<div class="absolute inset-0 bg-white/20 w-1/2 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-3xl text-blue-600 dark:text-blue-400 font-['Manrope'] text-[10px] font-semibold uppercase tracking-widest fixed bottom-0 w-full rounded-t-[3rem] shadow-[0_-10px_40px_rgba(0,88,189,0.08)] left-0 z-50 flex justify-around items-center px-4 pb-8 pt-4">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-400 px-6 py-2 hover:scale-110 transition-transform duration-200 tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">home</span>
+<span>Home</span>
+</a>
+<!-- Map (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-400 px-6 py-2 hover:scale-110 transition-transform duration-200 tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">map</span>
+<span>Map</span>
+</a>
+<!-- Dashboard (Active) -->
+<a class="flex flex-col items-center justify-center bg-blue-600 text-white rounded-full px-6 py-2 shadow-lg shadow-blue-500/30 hover:scale-110 transition-transform duration-200 tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span>Dashboard</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-blue-400 px-6 py-2 hover:scale-110 transition-transform duration-200 tap-highlight-transparent active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gabès Sentinel - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#191c1d",
+                        "outline": "#727785",
+                        "on-tertiary-container": "#f7fff1",
+                        "secondary-container": "#b7ccfd",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "primary": "#0058bd",
+                        "secondary-fixed-dim": "#b1c6f7",
+                        "inverse-surface": "#2e3132",
+                        "outline-variant": "#c2c6d5",
+                        "on-surface-variant": "#424753",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed": "#002105",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9fa",
+                        "tertiary": "#0d6b24",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container": "#edeeef",
+                        "on-secondary-container": "#415680",
+                        "primary-container": "#2771df",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-secondary-fixed-variant": "#31466f",
+                        "on-tertiary-fixed-variant": "#005318",
+                        "inverse-primary": "#adc6ff",
+                        "on-primary-fixed-variant": "#004494",
+                        "secondary": "#495e89",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed": "#001a41",
+                        "tertiary-container": "#30853b",
+                        "tertiary-fixed": "#9ff79f",
+                        "secondary-fixed": "#d8e2ff",
+                        "tertiary-fixed-dim": "#83da85",
+                        "on-primary-container": "#fefcff",
+                        "on-surface": "#191c1d",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-tint": "#005ac1",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#001a41",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-on-surface": "#f0f1f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f8f9fa; color: #191c1d; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32 md:pb-12 pt-24 md:pt-28 selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="hidden md:flex flex justify-between items-center px-8 h-20 w-full fixed top-0 left-0 z-50 bg-[#ffffffb3] dark:bg-[#191c1db3] backdrop-blur-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">cleaning_services</span>
+<span class="font-['Plus_Jakarta_Sans'] text-2xl font-bold tracking-tight text-[#191c1d] dark:text-[#f8f9fa]">Gabès Sentinel</span>
+</div>
+<nav class="flex items-center gap-6 font-['Manrope'] text-sm font-semibold">
+<a class="text-[#495e89] hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-4 py-2 rounded-full active:scale-95 transition-transform duration-200" href="#">Home</a>
+<a class="text-[#495e89] hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-4 py-2 rounded-full active:scale-95 transition-transform duration-200" href="#">Map</a>
+<a class="text-[#4285F4] hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-4 py-2 rounded-full active:scale-95 transition-transform duration-200" href="#">Dashboard</a>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full object-cover ml-4" data-alt="Close-up portrait of a young woman with natural makeup looking directly at the camera, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw4K9IJelyBQO4x4xEipb6tBRBVmb4hwtHNIdVB0G18jEc-xtxjLBOi9Gku_1hhmFjX5fKlR_P20-eYGk6wuQRvK7iTdwjXvIM1-ln5oYKRiGzTD826urjh4Ry7rBHdaicjOZT3SDD9RkSiy0A-8jI0aA3G-gaXay-p6NkhdVdQfff7n-hDPdSNQgBVTP0fEIbwAVcCjMmQuRitXmeBpXMQwzmHqmambWITSREFldJlUk2WFF8--6pKlZkxKcuiESfQD9YcQ-gzg-B"/>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+<div>
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-2">Environmental Insights</h1>
+<p class="font-body text-lg text-secondary">Real-time data overview for Gabès region.</p>
+</div>
+<button class="bg-gradient-to-b from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-label font-bold tracking-wide shadow-[0_20px_40px_-10px_rgba(0,88,189,0.3)] hover:scale-105 transition-transform duration-300 flex items-center gap-2">
+<span class="material-symbols-outlined">download</span> Export Report
+            </button>
+</div>
+<!-- Alert Card -->
+<div class="bg-error-container rounded-xl p-6 flex items-start gap-4 shadow-[0_20px_40px_-10px_rgba(186,26,26,0.1)] relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="material-symbols-outlined text-error text-3xl mt-1" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div class="flex-1">
+<h3 class="font-headline font-bold text-on-error-container text-xl mb-1">High PM2.5 detected in Industrial Zone</h3>
+<p class="font-body text-on-error-container/80 text-sm">Levels exceeded safe limits by 45% in the last 2 hours. Advisory sent to local residents.</p>
+</div>
+<button class="text-on-error-container opacity-50 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Bento Grid Dashboard -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+<!-- Primary Metric: AQI Chart -->
+<div class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 shadow-[0_30px_60px_-15px_rgba(25,28,29,0.03)] relative overflow-hidden border-0">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h2 class="font-headline text-2xl font-bold text-on-surface">Air Quality Index</h2>
+<p class="font-body text-sm text-secondary">7-Day Trend</p>
+</div>
+<div class="bg-tertiary-fixed text-tertiary px-4 py-1.5 rounded-full font-label text-sm font-bold flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> Good
+                    </div>
+</div>
+<div class="h-64 w-full relative">
+<!-- Faux Line Chart using SVG for design system demonstration -->
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 50">
+<defs>
+<lineargradient id="chart-gradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0058bd" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#0058bd" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,40 C10,35 20,45 30,30 C40,15 50,25 60,20 C70,15 80,30 90,10 L100,15 L100,50 L0,50 Z" fill="url(#chart-gradient)"></path>
+<path d="M0,40 C10,35 20,45 30,30 C40,15 50,25 60,20 C70,15 80,30 90,10 L100,15" fill="none" stroke="#0058bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<!-- Data Points -->
+<circle cx="30" cy="30" fill="#ffffff" r="1.5" stroke="#0058bd" stroke-width="1"></circle>
+<circle cx="60" cy="20" fill="#ffffff" r="1.5" stroke="#0058bd" stroke-width="1"></circle>
+<circle cx="90" cy="10" fill="#ffffff" r="1.5" stroke="#0058bd" stroke-width="1"></circle>
+</svg>
+</div>
+</div>
+<!-- Secondary Metric: Community Impact -->
+<div class="bg-surface-container-low rounded-xl p-8 flex flex-col justify-between shadow-[0_20px_40px_-10px_rgba(25,28,29,0.02)]">
+<div>
+<h3 class="font-headline font-bold text-lg text-on-surface mb-2">Community Impact</h3>
+<p class="font-body text-sm text-secondary">Score based on active participation</p>
+</div>
+<div class="mt-8">
+<span class="font-headline text-[4rem] leading-none font-extrabold text-primary block mb-2">84</span>
+<div class="w-full bg-surface-container-highest rounded-full h-2 mb-2">
+<div class="bg-gradient-to-r from-primary to-primary-container h-2 rounded-full" style="width: 84%"></div>
+</div>
+<p class="font-label text-xs text-secondary text-right font-semibold">Top 15% region</p>
+</div>
+</div>
+<!-- Water Quality Mini Chart -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_20px_40px_-10px_rgba(25,28,29,0.03)] border-0 relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10"></div>
+<h3 class="font-headline font-bold text-lg text-on-surface mb-1">Water Quality</h3>
+<p class="font-body text-xs text-secondary mb-6">Coastline Avg</p>
+<div class="flex items-end justify-between h-24 gap-2">
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[40%] hover:bg-secondary-fixed-dim transition-colors"></div>
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[60%] hover:bg-secondary-fixed-dim transition-colors"></div>
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[30%] hover:bg-secondary-fixed-dim transition-colors"></div>
+<div class="w-full bg-primary/60 rounded-t-sm h-[80%]"></div>
+<div class="w-full bg-surface-container-highest rounded-t-sm h-[50%] hover:bg-secondary-fixed-dim transition-colors"></div>
+</div>
+</div>
+<!-- Total Resolved Issues -->
+<div class="md:col-span-2 bg-gradient-to-br from-surface-container-lowest to-surface-container-low rounded-xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 shadow-[0_30px_60px_-15px_rgba(25,28,29,0.03)]">
+<div class="flex-1">
+<h3 class="font-headline font-bold text-xl text-on-surface mb-2">Total Resolved Issues</h3>
+<p class="font-body text-sm text-secondary">Community reported and verified fixed.</p>
+<div class="mt-6 flex gap-4">
+<span class="inline-flex items-center gap-1 font-label text-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12% this month
+                        </span>
+</div>
+</div>
+<div class="relative w-32 h-32 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<span class="absolute font-headline text-3xl font-extrabold text-on-surface">342</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-center items-center pb-8 pt-2">
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-lg rounded-[9999px] bg-[#ffffffb3] dark:bg-[#191c1db3] backdrop-blur-[40px] shadow-[0_25px_60px_-15px_rgba(66,133,244,0.15)] flex justify-around items-center px-2 py-2 border-0">
+<a class="flex flex-col items-center justify-center text-[#495e89] dark:text-[#c2c6d5] px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 rounded-full transition-all scale-110 duration-300 ease-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">home</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#495e89] dark:text-[#c2c6d5] px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 rounded-full transition-all scale-110 duration-300 ease-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">map</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-wider">Map</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-b from-[#4285F4] to-[#2771df] text-white rounded-full px-6 py-2.5 shadow-lg hover:bg-blue-50/50 dark:hover:bg-blue-900/20 transition-all scale-110 duration-300 ease-out group" href="#" style="font-variation-settings: 'FILL' 1;">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">dashboard</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-wider">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#495e89] dark:text-[#c2c6d5] px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 rounded-full transition-all scale-110 duration-300 ease-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform">person</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

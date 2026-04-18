@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gabès Sentinel - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#191c1d",
+                      "outline": "#727785",
+                      "on-tertiary-container": "#f7fff1",
+                      "secondary-container": "#b7ccfd",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#d9dadb",
+                      "primary": "#0058bd",
+                      "secondary-fixed-dim": "#b1c6f7",
+                      "inverse-surface": "#2e3132",
+                      "outline-variant": "#c2c6d5",
+                      "on-surface-variant": "#424753",
+                      "background": "#f8f9fa",
+                      "on-tertiary-fixed": "#002105",
+                      "error-container": "#ffdad6",
+                      "surface": "#f8f9fa",
+                      "tertiary": "#0d6b24",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-variant": "#e1e3e4",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-container": "#edeeef",
+                      "on-secondary-container": "#415680",
+                      "primary-container": "#2771df",
+                      "surface-container-low": "#f3f4f5",
+                      "primary-fixed-dim": "#adc6ff",
+                      "on-secondary-fixed-variant": "#31466f",
+                      "on-tertiary-fixed-variant": "#005318",
+                      "inverse-primary": "#adc6ff",
+                      "on-primary-fixed-variant": "#004494",
+                      "secondary": "#495e89",
+                      "surface-bright": "#f8f9fa",
+                      "on-primary-fixed": "#001a41",
+                      "tertiary-container": "#30853b",
+                      "tertiary-fixed": "#9ff79f",
+                      "secondary-fixed": "#d8e2ff",
+                      "tertiary-fixed-dim": "#83da85",
+                      "on-primary-container": "#fefcff",
+                      "on-surface": "#191c1d",
+                      "primary-fixed": "#d8e2ff",
+                      "surface-tint": "#005ac1",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed": "#001a41",
+                      "surface-container-high": "#e7e8e9",
+                      "inverse-on-surface": "#f0f1f2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Manrope"
+                      ],
+                      "label": [
+                              "Manrope"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body antialiased min-h-screen flex flex-col pb-24 md:pb-0 pt-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#ffffffb3] dark:bg-[#191c1db3] backdrop-blur-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#4285F4] text-3xl" data-icon="environmental_services">cleaning_services</span>
+<h1 class="font-['Plus_Jakarta_Sans'] text-2xl font-extrabold tracking-tight text-[#191c1d] dark:text-[#f8f9fa]">Gabès Sentinel</h1>
+</div>
+<!-- Web Navigation -->
+<nav class="hidden md:flex gap-8">
+<a class="font-label text-[#4285F4] font-semibold tracking-wider uppercase text-sm hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-4 py-2 rounded-full active:scale-95 transition-transform duration-200" href="#">Home</a>
+<a class="font-label text-[#495e89] font-semibold tracking-wider uppercase text-sm hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-4 py-2 rounded-full active:scale-95 transition-transform duration-200" href="#">Map</a>
+<a class="font-label text-[#495e89] font-semibold tracking-wider uppercase text-sm hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-4 py-2 rounded-full active:scale-95 transition-transform duration-200" href="#">Dashboard</a>
+<a class="font-label text-[#495e89] font-semibold tracking-wider uppercase text-sm hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors px-4 py-2 rounded-full active:scale-95 transition-transform duration-200" href="#">Profile</a>
+</nav>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden shrink-0">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Portrait of a young man smiling, bright natural lighting, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTn55C4RL2cBRAoSW3i7eIpdrf1kSfyh5d_OVrpCBI0MlFTmQQSY0Iwjw2cewN-FcJq-9YFPlXNl6H2aBd1BYxqCMexIVenZZVKfxTpYEhIc3lLRAnPJ9rs9OxMl8ynDqrun7ksdEqbHnbtnPVFJ5VoZMpeTRzck0vTn2ku6iXj_MmPfoz8dwDvjGjJRR39vLgEWHxHCDT_L9TMM2VAq5dzp-hFa6zfI2_0_JnLS9czoshnFtRxv7aJPyMEYNQEAC0EMs1oPBoq0OQ"/>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-7xl mx-auto px-6 md:px-8 space-y-12">
+<!-- Welcome Section -->
+<section class="pt-8">
+<h2 class="font-headline text-display-lg md:text-5xl font-extrabold text-on-surface leading-tight tracking-tight">
+                Hello, Ahmed! <br/>
+<span class="text-secondary text-3xl md:text-4xl font-bold mt-2 block">How can we help protect Gabès today?</span>
+</h2>
+</section>
+<!-- Primary Action Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Prominent Report Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between relative overflow-hidden shadow-[0_40px_60px_-15px_rgba(0,88,189,0.08)] group cursor-pointer border-0">
+<!-- Decorative blurred background element -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary-container rounded-full blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="add_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-2">Report an Issue</h3>
+<p class="text-secondary font-body text-lg mb-8 max-w-md">Quickly log environmental concerns. Your reports go directly to local authorities.</p>
+</div>
+<!-- Quick Action Icons -->
+<div class="flex flex-wrap gap-4 relative z-10 mt-auto">
+<button class="bg-surface-container-low hover:bg-surface-variant transition-colors rounded-full px-6 py-3 flex items-center gap-2 group/btn">
+<span class="material-symbols-outlined text-secondary group-hover/btn:text-primary transition-colors" data-icon="air">air</span>
+<span class="font-label font-semibold text-sm text-on-surface">Pollution</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-variant transition-colors rounded-full px-6 py-3 flex items-center gap-2 group/btn">
+<span class="material-symbols-outlined text-secondary group-hover/btn:text-primary transition-colors" data-icon="water_drop">water_drop</span>
+<span class="font-label font-semibold text-sm text-on-surface">Water</span>
+</button>
+<button class="bg-surface-container-low hover:bg-surface-variant transition-colors rounded-full px-6 py-3 flex items-center gap-2 group/btn">
+<span class="material-symbols-outlined text-secondary group-hover/btn:text-primary transition-colors" data-icon="delete">delete</span>
+<span class="font-label font-semibold text-sm text-on-surface">Waste</span>
+</button>
+</div>
+<!-- CTA Button -->
+<div class="absolute bottom-8 right-8 z-10">
+<button class="w-14 h-14 bg-gradient-to-b from-primary to-primary-container text-on-primary rounded-full flex items-center justify-center shadow-[0_20px_40px_rgba(0,88,189,0.3)] hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Stats/Secondary Card -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl p-8 flex flex-col justify-center">
+<div class="mb-4">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-2" data-icon="monitoring">monitoring</span>
+<h4 class="font-headline text-xl font-bold text-on-surface">Your Impact</h4>
+</div>
+<div class="text-display-lg font-headline font-extrabold text-primary leading-none mb-2">12</div>
+<p class="text-secondary font-body font-medium">Reports resolved this month</p>
+</div>
+</section>
+<!-- Recent Community Actions List -->
+<section class="pb-12">
+<div class="flex justify-between items-end mb-8">
+<h3 class="font-headline text-2xl font-bold text-on-surface">Recent Community Actions</h3>
+<a class="text-primary font-label font-semibold text-sm uppercase tracking-wider hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Water Leak</h4>
+<p class="text-xs text-outline font-label">2 hours ago • Industrial Zone</p>
+</div>
+</div>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-tertiary-fixed text-tertiary-container uppercase tracking-wider">
+                            Verified
+                        </span>
+</div>
+<p class="text-sm text-secondary font-body line-clamp-2">Reported large puddle forming near the main junction, suspected pipe burst.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="delete">delete</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Illegal Dumping</h4>
+<p class="text-xs text-outline font-label">5 hours ago • Coastal Road</p>
+</div>
+</div>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-secondary-container text-on-secondary-container uppercase tracking-wider">
+                            In Progress
+                        </span>
+</div>
+<p class="text-sm text-secondary font-body line-clamp-2">Construction debris dumped along the coastal path overnight.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="air">air</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Air Quality Drop</h4>
+<p class="text-xs text-outline font-label">Yesterday • City Center</p>
+</div>
+</div>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-tertiary-fixed text-tertiary-container uppercase tracking-wider">
+                            Verified
+                        </span>
+</div>
+<p class="text-sm text-secondary font-body line-clamp-2">Strong chemical odor detected in the downtown area, sensors confirm spike in VOCs.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] max-w-lg rounded-[9999px] bg-[#ffffffb3] dark:bg-[#191c1db3] backdrop-blur-[40px] shadow-[0_25px_60px_-15px_rgba(66,133,244,0.15)] z-50 flex justify-center items-center pb-8 pt-2">
+<div class="flex justify-around items-center w-full px-2">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-b from-[#4285F4] to-[#2771df] text-white rounded-full px-6 py-2.5 shadow-lg scale-110 duration-300 ease-out group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-wider mt-1 hidden group-hover:block">Home</span>
+</a>
+<!-- Map -->
+<a class="flex flex-col items-center justify-center text-[#495e89] dark:text-[#c2c6d5] px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="map">map</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-wider mt-1 hidden group-hover:block">Map</span>
+</a>
+<!-- Dashboard -->
+<a class="flex flex-col items-center justify-center text-[#495e89] dark:text-[#c2c6d5] px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="dashboard">dashboard</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-wider mt-1 hidden group-hover:block">Dashboard</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#495e89] dark:text-[#c2c6d5] px-4 py-2 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 rounded-full transition-all group" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-wider mt-1 hidden group-hover:block">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
